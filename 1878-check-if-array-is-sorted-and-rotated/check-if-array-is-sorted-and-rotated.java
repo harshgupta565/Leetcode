@@ -1,3 +1,4 @@
+
 class Solution {
     public boolean check(int[] nums) {
         int count = 0;
@@ -12,6 +13,5 @@ class Solution {
     return count<=1;
 }
 }
-
 
 
