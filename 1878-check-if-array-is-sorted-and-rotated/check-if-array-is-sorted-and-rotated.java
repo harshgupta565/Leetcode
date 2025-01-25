@@ -1,17 +1,15 @@
-
 class Solution {
     public boolean check(int[] nums) {
-        int count = 0;
-        int n = nums.length;
-        for( int i = 1 ; i < n ; i++){
-            if(nums[i - 1] > nums[i]){
-            count++;
+        int count=0;
+        for(int i = 1;i< nums.length;i++){
+            if(nums[i-1]>nums[i]){
+                count ++;
+            }
         }
+            if(nums[0]<nums[nums.length-1]){
+                count++;
+            }
+            return count<=1;
+        
     }
-    if(nums[n-1]>nums[0]){
-    count++;}
-    return count<=1;
 }
-}
-
-
