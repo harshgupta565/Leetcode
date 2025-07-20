@@ -1,13 +1,25 @@
+import java.util.*;
 class Solution {
     public int firstUniqChar(String s) {
-        int result=Integer.MAX_VALUE;
-        for(char c= 'a' ; c<='z';c++){
-            int index = s.indexOf(c);
-            if(index!=-1 && index ==s.lastIndexOf(c)){
-                result =Math.min(result,index);
-            }
+        HashMap<Character,Integer> set = new HashMap<>();
+        int n = s.length();
+        int i =0;
+        while(i<n){
+            char ch = s.charAt(i);
+            set.put(ch, set.getOrDefault(ch, 0) + 1);
+            i++;
         }
-            return result ==Integer.MAX_VALUE?-1:result;
-        
+        i = 0;
+        while(i<n){
+            if(set.get(s.charAt(i)) ==1)
+            return i;
+            i++;
+        }
+        return -1;
     }
 }
+
+
+
+
+
