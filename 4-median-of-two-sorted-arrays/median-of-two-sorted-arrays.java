@@ -8,7 +8,7 @@ class Solution {
         int k = 0;
         
         while(i<m && j<n){
-            // agr nums1 chhoti hh to temp wali apni array me apn nums1[i] value wali index ko daal denge 
+              
         if(nums1[i] < nums2[j]){
             arr[k]=nums1[i];
             k++;
